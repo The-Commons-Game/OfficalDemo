@@ -1,0 +1,16 @@
+{
+  "name": "the-commons-flat",
+  "private": true,
+  "version": "1.0.0",
+  "description": "The Commons political career simulator \u2014 flat GitHub Pages edition.",
+  "scripts": {
+    "dev": "python3 -m http.server 4173",
+    "preview": "python3 -m http.server 4173"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

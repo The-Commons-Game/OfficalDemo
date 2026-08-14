@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="The Commons">
+<rect width="100" height="100" rx="22" fill="#0b3d78"/>
+<path d="M50 9 84 21v27c0 23-13 37-34 44C29 85 16 71 16 48V21z" fill="none" stroke="#fff" stroke-width="7"/>
+<path d="M29 40h42M34 53h32M40 66h20M42 28h16" fill="none" stroke="#fff" stroke-width="5"/>
+<circle cx="50" cy="28" r="4" fill="#fff"/>
+</svg>

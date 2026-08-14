@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Commons — Political Career Game</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><nav class="nav">
+<div class="brand">
+<svg class="logo" viewBox="0 0 100 100" aria-label="The Commons">
+<path d="M50 7 86 20v28c0 25-14 40-36 46C28 88 14 73 14 48V20z" fill="none" stroke="currentColor" stroke-width="7"/>
+<path d="M29 40h42M34 53h32M40 66h20M42 28h16" fill="none" stroke="currentColor" stroke-width="5"/>
+<circle cx="50" cy="28" r="4" fill="currentColor"/>
+</svg><span>The Commons</span>
+</div>
+<div class="navlinks">
+<button onclick="home()">Home</button><button onclick="careers()">Careers</button>
+<button onclick="hub()">Westminster</button><button onclick="daily()">Daily Brief</button>
+<button onclick="newspaper()">Newspaper</button><button onclick="sharePage()">Share</button><button onclick="settings()">Settings</button>
+<button class="secondary" onclick="settings()">Account</button>
+</div>
+</nav></header>
+<main id="app"></main>
+<footer>The Commons · Westminster political career game · Autosaves locally in your browser</footer>
+<div class="modal" id="modal"><div class="modalbox" id="modalbox"></div></div>
+<div class="toast" id="toast"></div>
+
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="app.js"></script>
+
+<div id="expandedCareerHub" class="modal" style="display:none">
+  <div class="modal-card">
+    <h2>Expanded Career Hub</h2>
+    <div class="career-grid">
+      <div class="career-card"><h3>Prime Minister</h3><p>Royal audience → Downing Street → speech → PMQs → Cabinet → elections and leadership contests.</p><button onclick="careerAction('royal')">Start constitutional route</button></div>
+      <div class="career-card"><h3>House of Commons</h3><p>Get sworn in, choose Government or Opposition, question the PM and visit your constituency.</p></div>
+      <div class="career-card"><h3>House of Lords</h3><p>Lords-only UI, swearing in, debates, scrutiny and State Opening.</p><button onclick="careerAction('stateopening')">State Opening</button></div>
+      <div class="career-card"><h3>Election Campaign</h3><p>Four-week campaign, sign maker, speeches, rallies and constituency campaigning.</p><button onclick="careerAction('election')">Campaign</button></div>
+      <div class="career-card"><h3>Commons Twitter</h3><p>Create an account, post policies and see fictional public reaction.</p><button onclick="careerAction('twitter')">Open</button></div>
+      <div class="career-card"><h3>Leadership</h3><p>After four weeks in government: resignation speech, contest date, two Cabinet candidates, farewell and Royal audience.</p><button onclick="careerAction('leadership')">Start process</button></div>
+      <div class="career-card"><h3>Black Rod</h3><p>Take on the ceremonial role and prepare for State Opening.</p><button onclick="careerAction('stateopening')">Enter role</button></div>
+      <div class="career-card"><h3>State Opening Planner</h3><p>Plan ceremonial timings and coordinate the event.</p><button onclick="careerAction('stateopening')">Plan</button></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
